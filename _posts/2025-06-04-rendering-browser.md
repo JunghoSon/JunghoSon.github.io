@@ -46,6 +46,8 @@ date: 2025-06-04
 </body>
 ```
 
+---
+
 ## 🔍 JavaScript의 역할
 
 JavaScript는 DOM과 CSSOM을 동적으로 조작할 수 있습니다.
@@ -59,20 +61,18 @@ element.style.width = "100px";
 이 경우 렌더 트리가 재계산되고, 레이아웃/페인트 과정이 다시 발생할 수 있습니다.
 이는 성능에 영향을 줄 수 있으므로 조심해서 사용해야 합니다.
 
+---
+
 ## ⚠️ 성능 최적화 관점에서의 렌더링 이해
 
 렌더링 파이프라인의 각 단계는 비용이 다릅니다:
 
 - Reflow (Layout): 가장 비용이 큼
-
 - Paint: 중간 정도의 비용
-
 - Composite: 상대적으로 저렴함
 
 💡 성능 최적화 팁
 
 - DOM 조작 최소화
-
 - Layout thrashing 방지 (offsetHeight와 같은 레이아웃 속성 반복 접근 자제)
-
 - transform, opacity를 활용해 페인트/레이아웃을 회피한 애니메이션 처리
